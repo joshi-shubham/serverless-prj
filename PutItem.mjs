@@ -21,7 +21,7 @@ export const handler = async (event) => {
 
     try {
         await client.send(new PutItemCommand(params));
-        return { statusCode: 200, body: JSON.stringify({ message: 'Record created successfully!' }) };
+        return { statusCode: 200, body: JSON.stringify({ message: 'Record created successfully!!!' }) };
     } catch (error) {
         console.error('Error creating record:', error);
         return { statusCode: 500, body: JSON.stringify({ message: 'Failed to create record', error }) };
