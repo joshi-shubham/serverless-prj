@@ -5,6 +5,8 @@ import { marshall } from '@aws-sdk/util-dynamodb';
 const client = new DynamoDBClient();
 
 export const handler = async (event) => {
+ 
+
     const timeToLive = new Date(event.TimeToLive).getTime() / 1000; // Convert to Unix timestamp in seconds
 
     const params = {

@@ -10,7 +10,11 @@ resource "aws_iam_role_policy" "lambda_policy" {
       {
         Action = [
           "dynamodb:*",
-          "cloudfront:*"
+          "cloudfront:*",
+          "cloudwatch:*",
+          "logs:CreateLogGroup",
+          "logs:CreateLogStream",
+          "logs:PutLogEvents",
         ]
         Effect   = "Allow"
         Resource = "*"

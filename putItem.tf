@@ -18,3 +18,8 @@ resource "aws_lambda_function" "put_lambda" {
 
   
 }
+
+resource "aws_cloudwatch_log_group" "put_lambda_log" {
+  name              = "/aws/lambda/put_db"
+  retention_in_days = 14
+}
