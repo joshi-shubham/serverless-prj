@@ -13,5 +13,6 @@ resource "aws_dynamodb_table" "remainder-table"{
       attribute_name = "TimeToLive"
       enabled = true
     }
+    stream_enabled = true
 
 }
