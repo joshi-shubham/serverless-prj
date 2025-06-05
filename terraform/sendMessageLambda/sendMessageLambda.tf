@@ -4,12 +4,16 @@ data "archive_file" "send_message_lambda" {
   output_path = "sendMessage_function_payload.zip"
 }
 
+variable "lambda_arn" {
+  
+}
+
 resource "aws_lambda_function" "send_message_lambda" {
   # If the file is not in the current working directory you will need to include a
   # path.module in the filename.
   filename      = "sendMessage_function_payload.zip"
   function_name = "sendMessage"
-  role          = aws_iam_role.lambda_role.arn
+  role          = var.lambda_arn
   handler       = "sendMessage.handler"
 
   source_code_hash = data.archive_file.send_message_lambda.output_base64sha256
