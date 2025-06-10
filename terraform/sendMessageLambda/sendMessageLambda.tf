@@ -1,10 +1,14 @@
 data "archive_file" "send_message_lambda" {
   type        = "zip"
-  source_file = "sendMessage.mjs"
+  source_file = "sendMessageLambda/sendMessage.mjs"
   output_path = "sendMessage_function_payload.zip"
 }
 
 variable "lambda_arn" {
+  
+}
+
+variable "dynamodb_stream_arn" {
   
 }
 
@@ -29,7 +33,7 @@ resource "aws_cloudwatch_log_group" "send_message_lambda_log" {
 }
 
 resource "aws_lambda_event_source_mapping" "dynamo_trigger_lambda" {
-  event_source_arn  = aws_dynamodb_table.remainder-table.stream_arn
+  event_source_arn  = var.dynamodb_stream_arn
   function_name     = aws_lambda_function.send_message_lambda.arn
   starting_position = "LATEST"
 

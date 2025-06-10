@@ -21,7 +21,7 @@ function App() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://0whhjppvll.execute-api.ca-central-1.amazonaws.com/dev/putReminder', {
+      const response = await axios.post('https://wnkrr3pj0a.execute-api.ca-central-1.amazonaws.com/dev/putReminder', {
         Id: Number(formData.Id),
         userId: formData.userId,
         TimeToLive: formData.TimeToLive,

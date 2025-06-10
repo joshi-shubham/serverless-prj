@@ -71,7 +71,7 @@ resource "aws_api_gateway_integration" "api_put_reminder_integration" {
   http_method = aws_api_gateway_method.api_method.http_method
   integration_http_method = "POST"
   type = "AWS"
-  uri = aws_lambda_function.put_lambda.invoke_arn
+  uri = module.putReminderLambda.LambdaInvokeArn
   depends_on = [ aws_api_gateway_rest_api.reminder_api, aws_api_gateway_resource.reminder_api_resource ]
 }
 
@@ -90,13 +90,12 @@ resource "aws_api_gateway_stage" "api_dev_stage" {
 resource "aws_lambda_permission" "put_lambda_permission" {
   statement_id  = "AllowMyDemoAPIInvoke"
   action        = "lambda:InvokeFunction"
-  function_name = aws_lambda_function.put_lambda.function_name
+  function_name = module.putReminderLambda.functionName
   principal     = "apigateway.amazonaws.com"
 
-  # The /* part allows invocation from any stage, method and resource path
-  # within API Gateway.
+
   source_arn = "${aws_api_gateway_rest_api.reminder_api.execution_arn}/*"
-  depends_on = [ aws_lambda_function.put_lambda, aws_api_gateway_rest_api.reminder_api ]
+  depends_on = [ module.putReminderLambda, aws_api_gateway_rest_api.reminder_api ]
 }
 
 resource "aws_api_gateway_method_response" "response_200" {

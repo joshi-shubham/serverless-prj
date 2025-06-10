@@ -1,6 +1,6 @@
 data "archive_file" "put_lambda" {
   type        = "zip"
-  source_file = "PutItem.mjs"
+  source_file = "putReminderLambda/PutItem.mjs"
   output_path = "lambda_function_payload.zip"
 }
 variable "lambda_arn" {

@@ -17,7 +17,7 @@ resource "aws_dynamodb_table" "remainder-table"{
     stream_view_type = "NEW_AND_OLD_IMAGES"
 }
 
-module "putReminderLammbda"{
+module "putReminderLambda"{
   source = "./putReminderLambda"
   lambda_arn = aws_iam_role.lambda_role.arn
 }
@@ -25,5 +25,6 @@ module "putReminderLammbda"{
 module "sendMessageLambda" {
   source = "./sendMessageLambda"
   lambda_arn = aws_iam_role.lambda_role.arn
+  dynamodb_stream_arn = aws_dynamodb_table.remainder-table.stream_arn
 }
 
