@@ -112,7 +112,9 @@ resource "aws_codebuild_project" "frontend_build" {
       type = "CODECONNECTIONS"
       resource = "arn:aws:codeconnections:us-east-1:211125522070:connection/814a901c-e45d-4860-8bab-4d0ca364dbbc"
     }
+    buildspec = "frontend/reminder-app/buildspec.yml"
 
   }
+  
   source_version = "main"
 }

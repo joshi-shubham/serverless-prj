@@ -1,6 +1,6 @@
 version: 0.2
 proxy:
-  upload-artifacts:yes
+  upload-artifacts: yes
   logs: yes
 
 phages:
