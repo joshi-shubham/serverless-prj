@@ -1,5 +1,6 @@
 resource "aws_s3_bucket" "reminderapp-frontend-pipeline" {
   bucket = "reminderapp-frontend-pipeline"
+  force_destroy = true
 }
 
 # resource "aws_s3_bucket_acl" "pipeline-bucket-acl" {
