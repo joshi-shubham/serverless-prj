@@ -1,14 +1,10 @@
-# Docker
-# Build a Docker image
-# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
-
 trigger:
 - azureDeployment
 
 resources:
 - repo: self
 
-pool: MyPool
+pool: MyPool  # ✅ Your self-hosted agent pool
 
 variables:
   tag: '$(Build.BuildId)'
@@ -18,20 +14,25 @@ stages:
   displayName: Build image
   jobs:
   - job: Build
-    displayName: Build
-    pool: MyPool
+    displayName: Build Docker Image
     steps:
+
+    - task: CmdLine@2
+      displayName: Show working directory
+      inputs:
+        script: pwd
+
     - task: Docker@2
-      displayName: Build an image
+      displayName: Build Docker image
       inputs:
         command: build
-        dockerfile: '**/Dockerfile'
+        dockerfile: '**/Dockerfile'  # Adjust this if it's not matching the actual path
         tags: |
           $(tag)
-    - task: CmdLine@2
-      inputs:
-        script: docker login --username shubjoshi --password-stdin $(DOCKERHUB_PASS) & docker images
-        
-        
- 
 
+    - task: CmdLine@2
+      displayName: Docker Login & List Images
+      inputs:
+        script: |
+          echo "$(DOCKERHUB_PASS)" | docker login --username shubjoshi --password-stdin
+          docker images
