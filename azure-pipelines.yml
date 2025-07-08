@@ -7,7 +7,7 @@ resources:
 pool: MyPool  # ✅ Your self-hosted agent pool
 
 variables:
-  tag: '$(Build.BuildId)'
+  tag: 'MyAppPool'
 
 stages:
 - stage: Build
@@ -26,7 +26,7 @@ stages:
       displayName: Build Docker image
       inputs:
         command: build
-        dockerfile: '**/Dockerfile'  # Adjust this if it's not matching the actual path
+        dockerfile: './Dockerfile'  # Adjust this if it's not matching the actual path
         tags: |
           $(tag)
 
