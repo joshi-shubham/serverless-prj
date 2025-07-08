@@ -4,21 +4,22 @@ trigger:
 resources:
 - repo: self
 
-pool: MyPool  # ✅ Your self-hosted agent pool
+pool: MyPool  # ✅ Your self-hosted agent pool name
 
 variables:
-  tag: 'MyAppPool'
+  imageName: 'shubjoshi/myapp'   # Docker Hub repo name
+  tag: 'MyAppPool'               # Custom tag (can use $(Build.BuildId) if dynamic)
 
 stages:
 - stage: Build
-  displayName: Build image
+  displayName: Build and Push Docker Image
   jobs:
   - job: Build
-    displayName: Build Docker Image
+    displayName: Build and Push
     steps:
 
     - task: CmdLine@2
-      displayName: Show working directory
+      displayName: Show working directory contents
       inputs:
         script: ls
 
@@ -26,13 +27,19 @@ stages:
       displayName: Build Docker image
       inputs:
         command: build
-        dockerfile: './Dockerfile'  # Adjust this if it's not matching the actual path
+        dockerfile: './Dockerfile'
         tags: |
-          $(tag)
+          $(imageName):$(tag)
 
     - task: CmdLine@2
-      displayName: Docker Login & List Images
+      displayName: Docker Login to Docker Hub
       inputs:
         script: |
           echo "$(DOCKERHUB_PASS)" | docker login --username shubjoshi --password-stdin
-          docker images
+
+    - task: Docker@2
+      displayName: Push Docker image to Docker Hub
+      inputs:
+        command: push
+        tags: |
+          $(imageName):$(tag)
