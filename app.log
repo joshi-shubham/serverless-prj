@@ -1,0 +1,19 @@
+2025-07-03 14:20:25,820 - ERROR - HTTPSConnectionPool(host='httpbin.dorg', port=443): Max retries exceeded with url: /post (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7e74b216ec60>: Failed to resolve 'httpbin.dorg' ([Errno -2] Name or service not known)"))
+2025-07-03 14:20:50,285 - ERROR - password or token not set
+2025-07-03 14:21:03,346 - INFO - Status: 200, Time: 1.009094s
+
+2025-07-03 14:21:03,346 - INFO - Payload:{'username': 'shubham-joshi', 'password': ********}
+
+2025-07-03 14:21:03,346 - INFO - Authorization header: Bearer reala******
+
+2025-07-03 14:22:29,966 - INFO - Status: 200, Time: 0.337263s
+2025-07-03 14:22:29,967 - INFO - Payload:{'username': 'shubham-joshi', 'password': ********}
+2025-07-03 14:22:29,967 - INFO - Authorization header: Bearer reala******
+2025-07-03 14:23:29,720 - INFO - Status: 200, Time: 1.642781s
+2025-07-03 14:23:29,720 - INFO - Payload:{'username': 'shubham-joshi', 'password': ********}
+2025-07-03 14:23:29,720 - INFO - Authorization header: Bearer reala******
+2025-07-03 14:23:35,082 - ERROR - Request Failed: {e}
+2025-07-03 14:23:43,865 - ERROR - Request Failed: password or token not set
+2025-07-03 14:25:02,925 - INFO - Status: 200, Time: 1.559433s
+2025-07-03 14:25:02,925 - INFO - Payload:{'username': 'shubham-joshi', 'password': ********}
+2025-07-03 14:25:02,925 - INFO - Authorization header: Bearer reala******

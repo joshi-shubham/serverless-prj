@@ -1,0 +1,72 @@
+1. Using the requests Module for REST APIs
+Making GET, POST, PUT, DELETE requests
+
+Sending/receiving JSON data
+
+Handling query parameters, status codes, timeouts
+
+2. API Authentication Methods
+Bearer tokens (Authorization: Bearer <token>)
+
+API keys (passed in headers or params)
+
+Basic Auth (requests.auth.HTTPBasicAuth)
+
+Introduction to OAuth2 (just the concept)
+
+3. Handling Sensitive Data Securely
+Using os.environ to access tokens securely
+
+Avoiding hardcoded secrets in code
+
+Storing secrets in .env files using python-dotenv
+
+4. Input & Output Validation
+Validating user or API response data
+
+Schema checking (basic or with jsonschema)
+
+Preventing injection or malformed data
+
+5. Error Handling with APIs
+Handling response codes (200, 400, 401, 500, etc.)
+
+Retrying failed requests (basic retry logic or tenacity module)
+
+Handling exceptions: timeouts, connection errors, JSON decode errors
+
+6. Using hashlib and hmac for Hashing and Signing
+SHA256 hashing (for integrity checks)
+
+HMAC signing (e.g., hmac.new(key, message, hashlib.sha256))
+
+Use cases: secure tokens, validating webhooks
+
+7. Rate Limiting and Throttling Awareness
+Understanding how to respect rate limits
+
+Reading headers like Retry-After
+
+Backoff logic for retries
+
+8. Logging and Secure Debugging
+Logging requests/responses without leaking sensitive info
+
+Using logging module properly
+
+Hiding tokens, credentials in logs
+
+9. Parsing and Working with JSON/XML
+Using json module safely
+
+Handling malformed data
+
+Optional: reading/parsing XML using xml.etree.ElementTree
+
+10. Creating a Secure Command-Line Script
+Using argparse to build CLI tools
+
+Accepting input securely (e.g., getpass)
+
+Making authenticated API calls from command line with options like --token, --url, etc.
+

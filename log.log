@@ -1,0 +1,65 @@
+2025-07-03 16:12:39,000 - INFO - here
+2025-07-03 16:12:48,484 - INFO - here
+2025-07-03 16:12:50,622 - INFO - Request to /status/200 succeeded
+2025-07-03 16:13:10,384 - INFO - here
+2025-07-03 16:13:10,699 - INFO - Request to /status/200 succeeded
+2025-07-03 16:13:13,346 - INFO - here
+2025-07-03 16:13:20,033 - INFO - here
+2025-07-03 16:13:31,538 - INFO - here
+2025-07-03 16:13:45,739 - INFO - here
+2025-07-03 16:13:47,859 - WARNING - request to /status/401 failed: Unauthorized.
+2025-07-03 16:13:51,499 - INFO - here
+2025-07-03 16:13:51,727 - INFO - Request to /status/200 succeeded
+2025-07-03 16:13:57,204 - INFO - here
+2025-07-03 16:16:27,863 - INFO - here
+2025-07-03 16:17:22,733 - INFO - here
+2025-07-03 16:17:23,340 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:17:23,341 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:17:23,430 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:17:23,430 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:18:30,658 - INFO - here
+2025-07-03 16:18:31,804 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:18:31,804 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:18:31,820 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:18:31,821 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:18:32,404 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:18:32,404 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:18:32,420 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:19:01,693 - INFO - here
+2025-07-03 16:19:03,953 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:19:08,419 - INFO - here
+2025-07-03 16:19:09,886 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:19:09,886 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:19:09,902 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:19:09,902 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:19:10,904 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:19:10,905 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:19:11,606 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:19:23,638 - INFO - here
+2025-07-03 16:19:25,637 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:19:25,637 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:19:26,849 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:19:26,849 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:19:27,629 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:19:27,630 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:19:28,007 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:20:21,784 - INFO - here
+2025-07-03 16:20:22,677 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:20:22,677 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:20:27,556 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:20:27,556 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:20:29,503 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:20:29,503 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:20:30,297 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:21:18,545 - INFO - here
+2025-07-03 16:21:20,179 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:21:20,180 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:21:21,564 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:21:21,564 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:21:21,930 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:21:21,931 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:21:21,949 - ERROR - Request to /status/500 failed after 3 retries.
+2025-07-03 16:22:01,496 - INFO - here
+2025-07-03 16:22:24,126 - INFO - here
+2025-07-03 16:23:00,163 - INFO - here
+2025-07-03 16:23:37,519 - INFO - here
