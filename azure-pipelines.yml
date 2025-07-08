@@ -8,7 +8,7 @@ pool: MyPool  # Your self-hosted agent pool
 
 variables:
   imageName: 'shubjoshi/myapp'
-  tag: 'MyAppPool'
+  tag: 'latest'
 
 stages:
 - stage: Build
