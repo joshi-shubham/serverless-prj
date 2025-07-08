@@ -7,8 +7,8 @@ resources:
 pool: MyPool  # Your self-hosted agent pool
 
 variables:
-  imageName: 'shubjoshi/myapp'   # Docker Hub image name
-  tag: 'MyAppPool'               # Custom tag
+  imageName: 'shubjoshi/myapp'
+  tag: 'MyAppPool'
 
 stages:
 - stage: Build
@@ -27,10 +27,10 @@ stages:
       displayName: Build Docker Image
       inputs:
         command: build
-        repository: $(imageName)      # 👈 set repository (image name)
+        repository: $(imageName)
         tags: |
-          $(tag)                      # 👈 set tag (e.g. MyAppPool)
-        dockerfile: ./Dockerfile      # Adjust if your Dockerfile is in a subfolder
+          $(tag)
+        dockerfile: ./Dockerfile
 
     - task: CmdLine@2
       displayName: Docker Login to Docker Hub
@@ -42,6 +42,6 @@ stages:
       displayName: Push Docker Image
       inputs:
         command: push
-        repository: $(imageName)      # 👈 same image name
+        repository: $(imageName)
         tags: |
-          $(tag)                      # 👈 same tag
+          $(tag)
