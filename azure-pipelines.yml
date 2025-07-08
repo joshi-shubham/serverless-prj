@@ -4,11 +4,11 @@ trigger:
 resources:
 - repo: self
 
-pool: MyPool  # ✅ Your self-hosted agent pool name
+pool: MyPool  # Your self-hosted agent pool
 
 variables:
-  imageName: 'shubjoshi/myapp'   # Docker Hub repo name
-  tag: 'MyAppPool'               # Custom tag (can use $(Build.BuildId) if dynamic)
+  imageName: 'shubjoshi/myapp'   # Docker Hub image name
+  tag: 'MyAppPool'               # Custom tag
 
 stages:
 - stage: Build
@@ -19,17 +19,18 @@ stages:
     steps:
 
     - task: CmdLine@2
-      displayName: Show working directory contents
+      displayName: Show working directory
       inputs:
         script: ls
 
     - task: Docker@2
-      displayName: Build Docker image
+      displayName: Build Docker Image
       inputs:
         command: build
-        dockerfile: './Dockerfile'
+        repository: $(imageName)      # 👈 set repository (image name)
         tags: |
-          $(imageName):$(tag)
+          $(tag)                      # 👈 set tag (e.g. MyAppPool)
+        dockerfile: ./Dockerfile      # Adjust if your Dockerfile is in a subfolder
 
     - task: CmdLine@2
       displayName: Docker Login to Docker Hub
@@ -38,8 +39,9 @@ stages:
           echo "$(DOCKERHUB_PASS)" | docker login --username shubjoshi --password-stdin
 
     - task: Docker@2
-      displayName: Push Docker image to Docker Hub
+      displayName: Push Docker Image
       inputs:
         command: push
+        repository: $(imageName)      # 👈 same image name
         tags: |
-          $(imageName):$(tag)
+          $(tag)                      # 👈 same tag
