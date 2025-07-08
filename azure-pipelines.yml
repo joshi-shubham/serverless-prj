@@ -3,10 +3,11 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
-- main
+- azureDeployment
 
 resources:
 - repo: self
+
 pool:
   name: MyPool
 
