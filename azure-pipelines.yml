@@ -20,7 +20,7 @@ stages:
     - task: CmdLine@2
       displayName: Show working directory
       inputs:
-        script: pwd
+        script: ls
 
     - task: Docker@2
       displayName: Build Docker image
