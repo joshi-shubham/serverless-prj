@@ -41,7 +41,7 @@ app.post('/api/user', (req, res) => {
 });
 
 app.get('/', (req,res) => {
-  res.send("Hellp from the APIIIIIIIIIIIIII!");
+  res.send("Hello from the APIIIIIIIIIIIIII!");
 });
 
 app.listen(port, () => {
