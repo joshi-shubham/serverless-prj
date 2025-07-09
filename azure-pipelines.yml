@@ -4,7 +4,7 @@ trigger:
 resources:
 - repo: self
 
-pool: MyPool  # Your self-hosted agent pool
+pool: MyPool
 
 variables:
   imageName: 'shubjoshi/myapp'
