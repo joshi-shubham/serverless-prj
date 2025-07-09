@@ -47,13 +47,12 @@ stages:
           $(tag)
     
     - task: AzureContainerApps@1
-      - task: AzureContainerApps@1
-        displayName: Deploy Docker Hub image to Azure Container App
-        inputs:
-          azureSubscription: 'Azure subscription 1'
-          containerAppName: 'test'
-          resourceGroup: 'MyProject'
-          imageToDeploy: 'shubjoshi/myapp:latest'
-          registryServer: 'index.docker.io'
-          acrUsername: shubjoshi
-          acrPassword: $(DOCKERHUB_PASS)
+      displayName: Deploy Docker Hub image to Azure Container App
+      inputs:
+        azureSubscription: 'Azure subscription 1'
+        containerAppName: 'test'
+        resourceGroup: 'MyProject'
+        imageToDeploy: 'shubjoshi/myapp:latest'
+        registryServer: 'index.docker.io'
+        acrUsername: shubjoshi
+        acrPassword: $(DOCKERHUB_PASS)
