@@ -49,10 +49,9 @@ stages:
     - task: AzureContainerApps@1
       displayName: Deploy Docker Hub image to Azure Container App
       inputs:
-        azureSubscription: 'Azure subscription 1'
+        azureSubscription: 'MyConnection'
         containerAppName: 'test'
         resourceGroup: 'MyProject'
-        imageToDeploy: 'shubjoshi/myapp:latest'
-        registryServer: 'index.docker.io'
+        imageToDeploy: 'index.docker.io/shubjoshi/myapp:latest'
         acrUsername: shubjoshi
         acrPassword: $(DOCKERHUB_PASS)
